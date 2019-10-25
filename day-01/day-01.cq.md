@@ -1,107 +1,29 @@
-# What is Vue?
+# What is React Native?
 
-> Over the next 30 days, we’re going to walk through everything you need to know to get started with the Vue framework. From the **very beginning** through topics like the **Vue Instance**, **Components**, and even **Testing**.
+Welcome to 30 days of React Native! Each day in our 30-day journey will cover about a different React Native topic. Many of the articles will build upon the previous day’s materials, and by the end of it we'll have covered all the fundamental concepts you need to build your own mobile app using React Native.
 
-Each day in our 30-day adventure will build upon the previous day's materials which will give us a good introduction to various terms, concepts, and underpinnings of the Vue framework.
+We expect readers to be familiar with fundamental React concepts like _components_ already. If you’re not, you can learn many of these with our more web-focused course [30 days of React](https://www.fullstackreact.com/30-days-of-react/). A basic understanding of web concepts like CSS is also expected.
 
-This series is mainly targeted to readers that have no prior Vue knowledge and have a little or some experience with JavaScript. Though this course has been prepared for you to cover the material linearly from article-to-article, you are more than welcome to hop around in the course if you feel you’ve already grasped certain concepts.
+You won't need to have any experience building mobile apps to understand any of the material covered. However, if you're already familiar with a topic and it feels like review, feel free to skip ahead.
 
-With all that said, let’s get started. We’ll start at the very beginning by discussing what Vue is.
+_So, what is React Native, anyway?_
 
-## What is Vue?
+## React Native
 
-Vue is an open source JavaScript framework geared towards building user interfaces, created by [Evan You](https://twitter.com/youyuxi?lang=en). If we take a glance at the [front page of the main website](https://vuejs.org/), we can see that Vue is said to be the progressive JavaScript framework that is **approachable**, **versatile**, and **performant**. Let’s explain each of these points:
+React is a JavaScript library for building user interfaces. _React Native_ is a framework for building _native_ Android and iOS apps using React.
 
-### Progressive
+One of the core concepts of React Native (and React) is to represent user interfaces in terms of different _components_. Here is an example of a component in React Native:
 
-Vue is recognized to be **progressive** since it can often be scaled down as well as it scales up. For very simple use cases, you can use Vue like you use jQuery - by dropping a single script tag:
+<iframe src="https://snack.expo.io/embedded?preview=true&platform=web&iframeId=rkIuJ4wVB&name=First%20component" />
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-```
+## Why React Native?
 
-But as your needs start to grow, Vue grows with you by giving you tools within the ecosystem to help you be more productive. Oftentimes, Vue is labeled as an adoptable framework since each of these tools can be incrementally added when needed.
+Many developers write native mobile applications using platform-supported languages, such as Swift/Objective-C for iOS and Java/Kotlin for Android. Instead of writing in different languages to build for both platforms, React Native allows you to build parts of your application (or all of it) in a single language (JavaScript) and framework (React). This minimizes the burden of familiarizing yourself with all the different languages, toolchains and development environments needed to support both iOS and Android. In other words, you can re-use any prior React and JavaScript knowledge from building web apps when building native mobile apps.
 
-### Approachable
+In addition to making it easy to share code between iOS and Android, React Native also allows developers to build components or functionality specific to one platform. We can write native components and APIs and define a “bridge” to the JavaScript interface. This flexibility means we can use React Native both for brand new projects and existing native applications.
 
-Vue is understood to be **approachable** since as long as you know standard HTML, CSS, and JS; you’re able to start working with Vue right away to build more complex web applications.
+## How is React Native different from hybrid app platforms?
 
-### Versatile
+Hybrid app platforms, like [Ionic](https://ionicframework.com/) and [Phonegap](https://phonegap.com/), also make it possible to build mobile applications using web technologies. Ionic, for example, already lets us create UI building blocks in the form of components (optionally even using React). However, these tools are different from React Native because they rely on WebViews in order to deliver the user interface. A WebView is a webpage embedded in a native app. The result is that the user interface often doesn’t feel like a typical native experience. Very minimal native code is actually used even though certain device APIs, like the camera roll, can still be accessed. On the other hand, React Native is a set of JavaScript bindings for native UI APIs. In other words, the UI in a React Native app is fully native.
 
-The Vue framework is recognized to be **versatile** since the Vue library itself fits neatly within an ecosystem of tools that make up the entire Vue framework. These tools are the:
-
-- The [vue-cli](https://cli.vuejs.org/) (i.e. Vue Command Line Interface) which allows for rapid prototyping and set-up of Vue-Webpack applications.
-- [vue-router](https://router.vuejs.org/) which helps us introduce client side routing into our application with relative ease.
-- [vuex](https://vuex.vuejs.org/guide/), the Elm-inspired Flux-like library that helps facilitate how data is managed in an application.
-- [vue-test-utils](https://vue-test-utils.vuejs.org/), the testing utility library that introduces various helpers and function to make testing Vue components a lot easier.
-
-Each of the above tools was created and is currently maintained by the Vue core team. This makes integrating and using them in Vue applications a relatively seamless experience. We’ll be discussing each of these libraries at various points throughout this series.
-
-### Performant
-
-Finally, Vue is seen to be **performant** since it takes advantage of the virtual DOM for incredibly fast re-render times. The Vue core library is also built to require minimal effort towards performance optimization.
-
-## Okay… cool… but how do we use it?
-
-In the simplest way possible, we can get started working with Vue by placing a script tag in an HTML file that loads the latest version of Vue from a Content Delivery Network (CDN). We can also reference a JavaScript file (named `main.js` for example) which would be the file where our Vue JavaScript code lives:
-
-```html
-<html>
-  <body>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
-</html>
-```
-
-With the Vue library available, we’re able to create a new Vue application. We’ll create this application by declaring the Vue Instance - which is the heart of a Vue application - in the `main.js` file. The Vue instance is created by declaring the `new Vue({})` constructor:
-
-```javascript
-new Vue({
-  // options
-});
-```
-
-A Vue instance accepts an **options** object which can contain details of the instance such as its template, data, methods, etc. Root level instances allow us to specify the DOM element with which the instance is to be mounted/attached to, like so:
-
-```javascript
-new Vue({
-  el: '#app',
-});
-```
-
-We've just used the element option, `el`, to dictate the HTML element with the `id` of `app` to be the **mounting point** of our Vue application.
-
-I> Vue is a user interface library focused on the _view_ layer. A Vue application needs to depend on an HTML DOM element to control how the element behaves.
-
-The Vue instance can also return data that needs to be handled within the view. This data has to be dictated within a `data` option. In our instance, let’s declare a `greeting` data property that’s given a string value of `Hello World!`:
-
-{lang=javascript,line-numbers=off}
-<<[src/main.js](./src/main.js)
-
-To have the `greeting` data value be presented in the template, we’ll first need to declare the element that our Vue app is to be mounted on (i.e. the element with the id of `app`):
-
-```html
-<html>
-  <body>
-    <div id="app">
-      <!--  where our Vue template code will live -->
-    </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
-</html>
-```
-
-We’ll now be able to display the value of the greeting property in our Vue instance on the HTML template. To bind data values as the text content of elements, we’ll use the [Mustache Syntax](https://vuejs.org/v2/guide/syntax.html#Text):
-
-{lang=html,line-numbers=off}
-<<[src/index.html](./src/index.html)
-
-The `greeting` data property in the template is now directly bound to the value in our instance. When our app loads, we’ll be presented with Hello World!
-
-<iframe src='./src/index.html'  ></iframe>
-
-> Live version - https://30dofv-helloworld.surge.sh
-
-That was easy, wasn’t it? In the next article, we'll take a deeper look at the `data` property of a Vue instance and how it enables _reactivity_ of our Vue applications.
+Tomorrow, we'll demonstrate how fast it is to bootstrap React Native applications by setting up our very first project.
