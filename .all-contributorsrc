@@ -1,6 +1,6 @@
 {
-  "projectName": "thirty-days-of-vue",
-  "projectOwner": "fullstackvue",
+  "projectName": "thirty-days-of-react-native",
+  "projectOwner": "fullstackreactnative",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": [
@@ -12,19 +12,19 @@
   "contributorsPerLine": 5,
   "contributors": [
     {
-      "login": "djirdehh",
-      "name": "Hassan Djirdeh",
-      "avatar_url": "https://pbs.twimg.com/profile_images/973750616487993344/fqDSTrb__400x400.jpg",
-      "profile": "https://twitter.com/djirdehh",
+      "login": "dabbott",
+      "name": "Devin Abbott",
+      "avatar_url": "https://pbs.twimg.com/profile_images/697293943872970754/dkgMlBJX_400x400.jpg",
+      "profile": "https://twitter.com/dvnabbott",
       "contributions": [
         "blog"
       ]
     },
     {
-      "login": "jashmenn",
-      "name": "Nate Murray",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/4318?v=4",
-      "profile": "https://newline.co",
+      "login": "hdjirdeh",
+      "name": "Houssein Djirdeh",
+      "avatar_url": "https://pbs.twimg.com/profile_images/1047891359007461376/WDC2DvTX_400x400.jpg",
+      "profile": "https://twitter.com/hdjirdeh",
       "contributions": [
         "blog"
       ]
