@@ -1,99 +1,56 @@
-# Layout with Flexbox
+# Styles
 
-Layouts in React Native are based on CSS — if you're familiar with properties like flex-direction and justify-content, then you already know how to create layouts in React Native (and if you're not, that's fine too!). Today we'll review the most important style properties.
+We use styles to make our apps look great. Styles let us configure the visual properties of our components, like background color, as well as their layout, i.e. their position and size on the screen.
 
-We'll first cover how to set the dimensions of an individual component.
+React Native styles are based on CSS: most of the style property names and values are the same between React for the web and React Native. This is convenient, since we'll be able to reuse a lot of our existing knowledge from building web apps.
 
-> Note that I also wrote part of the official React Native documentation on this topic, and there will be many similarities between this lesson and the documentation site.
+However, there are some important differences between CSS and React Native styles. The biggest difference is that there are no CSS files! There's no special language or syntax to learn; all of our styles are defined using JavaScript.
 
-## Fixed dimensions
+There are two common ways to define component styles:
 
-For a component to render on the screen, it needs both a width and height greater than 0. These can be set explicitly using the width and height style properties.
+- Inline styles
+- StyleSheets
 
-In the following example, we create 3 Views with different dimensions:
+We’ll start by exploring both of these approaches.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" />
+## Inline styles
 
-Setting dimensions this way is common for components that should always render at exactly the same size, regardless of screen dimensions.
+Most of the built-in React Native components (View, Text, Image, etc) accept a `style` object as a prop. Styling this way is similar to React for the web: keys are camel-cased CSS property names and values are typically CSS values. For example, we can configure the backgroundColor of a View by passing `{ backgroundColor: "#0088FF" }` as the style prop.
 
-## Flex dimensions
+In the following example, we set the backgroundColor, width, and height of a View using an _inline_ style object:
 
-We can use the flex style property to define a component that expands or shrinks to fill the available screen space. We do this frequently, since mobile devices have a wide range of screen sizes, and we want our app to look good on all of them.
+<iframe src="https://snack.expo.io/@dabbott/styled-view?preview=true&platform=web" />
 
-In this example, we create 3 Views that fill the height of the screen, regardless how big or small the screen is:
+Inline styles are useful for prototyping, since they're co-located with our rendering code. We also _need_ to use inline styles when defining dynamic styles, e.g. styles based on props, since we don't know the values of our props until the render function is called.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" />
+However, inline styles can quickly grow from a couple lines into quite a lot of code, which clutters our render method, making our code harder to follow. Wouldn't it be convenient if we could move them somewhere else? That's where StyleSheets come in.
 
-When using flex, we pass a number value. The larger the value, the higher the ratio of space a component will take compared to its siblings. A component with no siblings will fill its parent fully as long as the value is greater than 0.
-A flex value of 0 indicates that the component should not expand beyond its "intrinsic dimensions". In the following example, we render one Text component with a flex value of 0, and another with a flex value of 1.
+## StyleSheets
 
-<iframe src="https://snack.expo.io/@dabbott/flex-dimensions?preview=true&platform=web" />
+The `StyleSheet` API gives us a consistent way to define our styles outside of our component definition. Additionally, `StyleSheet` includes important performance optimizations that aren't possible with inline styles. For these reasons, we should generally use the `StyleSheet` API wherever possible, rather than inline styles.
 
-The intrinsic height of the text component is just large enough to fit the text itself. Note that flex defaults to 0 (use intrinsic dimensions), and that many components have an intrinsic width and height of 0 (such as View). If a component has a width or height of 0, nothing will render on the screen. This is a common source of confusion for beginners.
+Here's the same example as above using StyleSheets:
 
-## Laying out children
+<iframe src="https://snack.expo.io/@dabbott/stylesheet-view?preview=true&platform=web" />
 
-So far we've covered how a component can specify its own dimensions. Most layout properties, however, are controlled by a component's parent.
+We call `StyleSheet.create` with a top-level object containing nested style objects. `StyleSheet` will then optimize our styles and return them to us. The keys of the top-level object are arbitrary, but will determine the names of our optimized styles. We can then refer to them by name in our render method, e.g. styles.myStyle.
 
-We normally use a combination of flexDirection, justifyContent, and alignItems on a parent component to determine the layout of its children.
+A React Native StyleSheet is analogous to a CSS stylesheet containing classnames - we define them separately from our component code, and can reuse the same definition wherever we want that style.
 
-### flexDirection
+Sometimes we may want to apply multiple styles to a component at the same time (similar to "cascading" in CSS styles), and fortunately, React Native provides an easy way to do that.
 
-We use flexDirection to choose either a vertical or horizontal layout of children components. The two values we commonly use are:
+## Applying multiple styles
 
-- **row**: Align children from left to right.
-- **column**: (default) Align children from top to bottom.
+Suppose we want to render two `Text` components. One should use a "standard" text style, while the other should extend our "standard" text style with an additional "fancy" style.
 
-<iframe src="https://snack.expo.io/@dabbott/flex-direction?preview=true&platform=web" />
+On the web, we would probably pass two classnames to our "fancy" text component: one for the standard style and one for the fancy style. React Native lets us pass an array of styles to a component to accomplish the same thing. When we pass an array of styles as a style prop, their keys are merged into a single object, with the last object in the array taking precedence.
 
-The option we choose here determines the main axis of the layout. Our choice here will affect the meaning of the other layout properties.
+Here's our example with two `Text` components:
 
-> There are two other options for `flexDirection`, `row-reverse` and `column-reverse`, which will reverse the order of the children. These are rarely used; instead of adjusting the layout, reverse the order of the children in the component's render method.
+<iframe src="https://snack.expo.io/@dabbott/multiple-styles?preview=true&platform=web" />
 
-### justifyContent
+Here we can see that the fancy text uses the size of the "standard" text, but adds two additional style properties. Note that the color of the "fancy" style overrides the color of the "standard" style, since we pass it last in the array. Also note that we can mix-and-match inline style objects and StyleSheet styles in this array.
 
-We use justifyContent to determine the distribution of children align the primary axis. Here are the options for values we can use:
+This approach helps us manage the complexity of complicated components by reusing portions of our styles in multiple places.
 
-- **flex-start**: (default) Distribute children at the start of the main axis.
-- **center**: Distribute children in the center of the main axis.
-- **flex-end**: Distribute children at the end of the main axis.
-- **space-between**: Distribute children evenly along the main axis, with remaining space between the children.
-- **space-around**: Distribute children evenly along the main axis, with remaining space between the children, and also at the beginning and end of the main axis.
-
-<iframe src="https://snack.expo.io/@dabbott/justify-content?preview=true&platform=web" />
-
-### alignItems
-
-We use alignItems to determine the alignment of children along the cross axis. The cross axis is the axis that runs perpendicular to the main axis, e.g. if our flex-direction is column then our main axis is vertical and our cross axis is horizontal. Here are the options for values we can use:
-
-- **stretch**: (default) Stretch children to fill the parent.
-- **flex-start**: Align children at the start of cross axis.
-- **flex-end**: Align children at the end of cross axis.
-- **center**: Align children at the center of cross axis.
-- **baseline**: Align children along a common baseline. Individual children can be set to be the reference baseline for their parents.
-
-<iframe src="https://snack.expo.io/@dabbott/align-items?preview=true&platform=web" />
-
-## Differences from CSS
-
-The most important difference between flexbox in CSS and React Native are the default values.
-
-Here are the defaults for CSS:
-
-```css
-flex-direction: row;
-align-items: flex-start;
-position: static;
-```
-
-And React Native:
-
-```css
-flex-direction: column;
-align-items: stretch;
-position: relative;
-```
-
-Defaulting to a column layout on mobile is reasonable, since phones are by far the most common mobile device, and most of the time they're used in a vertical layout.
-
-There are a few other differences, such as flex only supporting a single number value in React Native, but the framework will generally warn you if you try to do something that isn't supported.
+Tomorrow we'll take styling a step further to define responsive layouts for our components.
