@@ -74,6 +74,8 @@ We use alignItems to determine the alignment of children along the cross axis. T
 
 <iframe src="https://snack.expo.io/@dabbott/align-items?preview=true&platform=web" />
 
+> Note that _stretch_ will not stretch a child if its `width` is set explitly (or height in the case of a `flexDirection: row` parent).
+
 ## Differences from CSS
 
 The most important difference between flexbox in CSS and React Native are the default values.
