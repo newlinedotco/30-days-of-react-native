@@ -14,7 +14,7 @@ For a component to render on the screen, it needs both a width and height greate
 
 In the following example, we create 3 Views with different dimensions:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" style="height: 20em" />
 
 Setting dimensions this way is common for components that should always render at exactly the same size, regardless of screen dimensions.
 
@@ -24,12 +24,12 @@ We can use the flex style property to define a component that expands or shrinks
 
 In this example, we create 3 Views that fill the height of the screen, regardless how big or small the screen is:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/width-and-height?preview=true&platform=web" style="height: 20em" />
 
 When using flex, we pass a number value. The larger the value, the higher the ratio of space a component will take compared to its siblings. A component with no siblings will fill its parent fully as long as the value is greater than 0.
 A flex value of 0 indicates that the component should not expand beyond its "intrinsic dimensions". In the following example, we render one Text component with a flex value of 0, and another with a flex value of 1.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/flex-dimensions?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/flex-dimensions?preview=true&platform=web" style="height: 20em" />
 
 The intrinsic height of the text component is just large enough to fit the text itself. Note that flex defaults to 0 (use intrinsic dimensions), and that many components have an intrinsic width and height of 0 (such as View). If a component has a width or height of 0, nothing will render on the screen. This is a common source of confusion for beginners.
 
@@ -46,7 +46,7 @@ We use flexDirection to choose either a vertical or horizontal layout of childre
 - **row**: Align children from left to right.
 - **column**: (default) Align children from top to bottom.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/flex-direction?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/flex-direction?preview=true&platform=web" style="height: 36em" />
 
 The option we choose here determines the main axis of the layout. Our choice here will affect the meaning of the other layout properties.
 
@@ -62,7 +62,7 @@ We use justifyContent to determine the distribution of children align the primar
 - **space-between**: Distribute children evenly along the main axis, with remaining space between the children.
 - **space-around**: Distribute children evenly along the main axis, with remaining space between the children, and also at the beginning and end of the main axis.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/justify-content?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/justify-content?preview=true&platform=web" style="height: 26em" />
 
 ### alignItems
 
@@ -74,7 +74,7 @@ We use alignItems to determine the alignment of children along the cross axis. T
 - **center**: Align children at the center of cross axis.
 - **baseline**: Align children along a common baseline. Individual children can be set to be the reference baseline for their parents.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/align-items?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/align-items?preview=true&platform=web" style="height: 36em" />
 
 > Note that _stretch_ will not stretch a child if its `width` is set explitly (or height in the case of a `flexDirection: row` parent).
 

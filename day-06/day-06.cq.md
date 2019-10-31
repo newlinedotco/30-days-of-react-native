@@ -31,13 +31,13 @@ Text components can use all of the same style properties as View components, plu
 
 In the following example, we'll set each of these properties, along with a few we've already used to style our View components:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text?preview=true&platform=web" style="height: 38em" />
 
 By default, `Text` components automatically grow horizontally to fit the text content drawn within. If the `Text` component can't grow horizontally within its parent anymore, it will then wrap the text content to the next line and grow vertically. However, we can override this behavior by specifying the dimensions of the component ourselves.
 
 In this example, we set the width of the `Text` to 200 explicitly, which affects where it wraps to the next line:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text-with-fixed-width?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text-with-fixed-width?preview=true&platform=web" style="height: 39em" />
 
 Note that textAlign affects the alignment of the text content drawn within the `Text` component, but not the component itself. If we want to align the `Text` component in the horizontal center of the screen, we would set the alignItems style property on the parent View.
 
@@ -45,11 +45,11 @@ Note that textAlign affects the alignment of the text content drawn within the `
 
 `Text` components are similar to "block" elements on the web — if we use multiple `Text` elements within the same parent, they will stack on top of each other:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/stacked-text-components?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/stacked-text-components?preview=true&platform=web" style="height: 42em" />
 
 However, we sometimes want `Text` components to act like "inline" elements so that we can render multiple styles of text content within a single paragraph. `Text` components can be nested to accomplish this. In this example, we'll style a specific range of text within the larger paragraph:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/nested-styled-text?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/nested-styled-text?preview=true&platform=web" style="height: 42em" />
 
 Styles applied to a `Text` component also apply to every Text component descendant within it. In the previous example, the nested text inherits styles.text, but then overrides the fontWeight by applying styles.boldText (the innermost style has the highest precedence).
 

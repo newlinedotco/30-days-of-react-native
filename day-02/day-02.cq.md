@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
 
 Save the file, and notice the application reload automatically!
 
-<iframe src="https://snack.expo.io/embedded/@houssein/first-change?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@houssein/first-change?preview=true&platform=web" style="height: 20em" />
 
 Now that we’ve covered how to get started with React Native, tomorrow we’ll write our very first component!
 
