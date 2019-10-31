@@ -20,7 +20,7 @@ React is a JavaScript library for building user interfaces. _React Native_ is a 
 
 One of the core concepts of React Native (and React) is to represent user interfaces in terms of different _components_. Here is an example of a component in React Native:
 
-<iframe src="https://snack.expo.io/embedded/rkIuJ4wVB?preview=true&platform=web" height="29em"/>
+<iframe src="https://snack.expo.io/embedded/rkIuJ4wVB?preview=true&platform=web" style="height: 29em"/>
 
 ## Why React Native?
 

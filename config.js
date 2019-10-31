@@ -22,7 +22,7 @@ module.exports = ({ dedent }) => ({
 
     Over the next 30 days, we'll walk through everything you need to know to work with React Native. From the **very beginning** through topics like the **React Native Components**, **Layouts**, and even **running on your device**.
   `,
-  summaryCtaButton: "Send my free lessons",
+  summaryCtaButton: "Send Me Free React Native Lessons",
   whatIsThis: dedent`
   This post is part of the series [**30 Days of React Native**](/30-days-of-react-native).
 
