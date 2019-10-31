@@ -1,11 +1,13 @@
 # Getting Started
 
-Before we can begin covering different React Native concepts, we’ll need to know how to get up and running with a brand new application first. This includes installing any required dependencies and setting up a working development environment. By the end of this article, we’ll have an application up and running on a real device or simulator! 
+> Expo provides a complete **managed workflow** that takes care of the entire build process.
+
+Before we can begin covering different React Native concepts, we’ll need to know how to get up and running with a brand new application first. This includes installing any required dependencies and setting up a working development environment. By the end of this article, we’ll have an application up and running on a real device or simulator!
 
 There are two ways to start building an application in React Native:
 
-* React Native CLI
-* Expo
+- React Native CLI
+- Expo
 
 In both cases, we can write the same exact React Native code for our application. However, there are differences between the workflows of both approaches. Let’s dive in!
 
@@ -23,7 +25,7 @@ Although React Native allows anyone to build for both mobile platforms without w
 
 On the other hand, Expo provides a complete **managed workflow** that takes care of the entire build process. This not only makes building and publishing apps easier without having to download and configure several different IDEs, but it also allows developers to build iOS applications without owning a Mac computer.
 
-However, Expo is not suitable for every application. Creating native modules in iOS or Android and bridging them to a new JavaScript API is not possible with Expo. This means that only the specific device APIs already provided by the platform can be used, but nothing more. 
+However, Expo is not suitable for every application. Creating native modules in iOS or Android and bridging them to a new JavaScript API is not possible with Expo. This means that only the specific device APIs already provided by the platform can be used, but nothing more.
 
 T> The [documentation](https://docs.expo.io/versions/v34.0.0/introduction/why-not-expo/0) explains this along with other reasons why Expo might not be the best option for every application.
 
@@ -79,15 +81,17 @@ Expo Dev Tools allows us to view logs of the application and provides all the co
 
 Now that we have a local development server running, we just need to view the app! Expo provides a client iOS and Android app that allows developers to preview React Native application on our real device or simulator.
 
-* If you have a physical Android device:
+- If you have a physical Android device:
+
   - Install Expo client on Google Play
   - Select `Scan QR code` and scan the QR code in the terminal
 
-* If you have a physical iOS device:
+- If you have a physical iOS device:
+
   - Install Expo client on the App Store
   - Scan the QR code with the Camera app
 
-* If you would like to run on a simulator:
+- If you would like to run on a simulator:
   - Press `a` to run on an Android emulator or press `i` to run on an iOS simulator
 
 And now you should see the application running directly on your mobile phone:
@@ -97,8 +101,8 @@ And now you should see the application running directly on your mobile phone:
 To make sure everything is working as expected, change a line of code in the file that holds the root component, `App.js`:
 
 ```js
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
@@ -111,10 +115,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
 ```
 
@@ -127,5 +131,3 @@ Now that we’ve covered how to get started with React Native, tomorrow we’ll 
 #### Footnotes
 
 [1]: It is always possible to eject from an Expo managed workflow application to a bare workflow or select it from the very beginning. This transitions your app to use the React Native CLI. Expo APIs will then need to be imported like any other third-party library.
-
-

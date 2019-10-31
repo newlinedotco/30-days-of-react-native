@@ -1,5 +1,7 @@
 # Displaying Images
 
+> Today we'll look at some of the different ways we can use the Image component to display images.
+
 When building a mobile app, we often display images from many different sources: images from the web, images bundled with the app, photos from the user's camera, and more. Our images can vary in size from just a few pixels to tens of megabytes. Sometimes images will act as the background of a screen, and other times they'll be tappable thumbnails in a feed.
 
 Because of these many different use cases, the `Image` component in React Native has to be extremely flexible. Today we'll look at some of the different ways we can use the Image component to display images.

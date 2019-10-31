@@ -1,6 +1,6 @@
 # Text Components
 
-The Text component is one of the most common React Native components — we use it whenever we need to display text in our app.
+> The Text component is one of the most common React Native components — we use it whenever we need to display text in our app.
 
 Unlike with React on the web, we can't just put text content directly inside any component. For example, this code _won't run_:
 
