@@ -20,8 +20,9 @@ module.exports = ({ dedent }) => ({
 
     We'll teach you how it all works - _for free_.
 
-    Over the next 30 days, we'll walk through everything you need to know to work with React Native. From the **very beginning** through topics like the **React Native Instance**, **Components**, and even **Testing**.
+    Over the next 30 days, we'll walk through everything you need to know to work with React Native. From the **very beginning** through topics like the **React Native Components**, **Layouts**, and even **running on your device**.
   `,
+  summaryCtaButton: "Send my free lessons",
   whatIsThis: dedent`
   This post is part of the series [**30 Days of React Native**](/30-days-of-react-native).
 
@@ -32,17 +33,17 @@ module.exports = ({ dedent }) => ({
     {
       q: "What is this?",
       a:
-        "This course is a series of articles which teach you how to use React Native from the ground up. The series provides a step-by-step process you can use to learn React Native from an empty folder to a Webpack-bundled React Native app."
+        "This course is a series of articles which teach you how to use React Native from the ground up. The series provides a step-by-step process you can use to learn React Native from an empty folder to running a React Native app on your device."
     },
     {
       q: "What if I get stuck?",
       a:
-        "Just [send us an email](react-native@fullstack.io) and we'll be happy to help you get unstuck."
+        "Just [hop in our Discord channel](https://newline.co/discord/react-native) and we'll be happy to help you get unstuck."
     },
     {
       q: "Who wrote this?",
       a:
-        "We're the authors of the [Fullstack React Native Book](https://fullstack.io/react-native)."
+        "We're the authors of the [Fullstack React Native Book](https://fullstackreact.com/react-native)."
     }
   ],
   faqImageUrl: "todo.jpg",
@@ -59,7 +60,7 @@ module.exports = ({ dedent }) => ({
   authorSlugs: ["dabbott", "hdjirdeh", "acco"],
   closingCtaH1: "Get started now",
   closingCtaCopy: `Join us on our 30-day journey in React Native. Join thousands of other professional React Native developers and learn one of the most powerful web application development frameworks available today.`,
-  closingCtaButton: "Download 30 Days of React Native PDF (FREE)",
+  closingCtaButton: "Get these lessons via email (Once per week, FREE)",
   publishedOn: "2019-01-07",
   lessonLanguage: "Day",
   ctaFormAction:
@@ -69,7 +70,7 @@ module.exports = ({ dedent }) => ({
   ctaInfVersion: "1.70.0.77019",
   modalCtaHeader: "Learn React Native (from the very beginning) in 30 days",
   modalCtaBody: dedent`
-  Enter your name and email address below, then click the **"Send my free PDF"** button to get started
+  Enter your name and email address below, then click the **"Send my free lessons"** button to get started
   `,
-  modalCtaButton: "SEND MY FREE PDF"
+  modalCtaButton: "SEND MY FREE LESSONS"
 });
