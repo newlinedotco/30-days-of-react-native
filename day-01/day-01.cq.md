@@ -1,3 +1,7 @@
+---
+coverImageBackgroundPosition: "50% 70%;"
+---
+
 # What is React Native?
 
 Welcome to 30 days of React Native! Each day in our 30-day journey will cover about a different React Native topic. Many of the articles will build upon the previous day’s materials, and by the end of it we'll have covered all the fundamental concepts you need to build your own mobile app using React Native.
