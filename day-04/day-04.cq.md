@@ -25,7 +25,7 @@ In the following example, we set the backgroundColor, width, and height of a Vie
 
 [Download example](https://expo.io/--/api/v2/snack/download/@dabbott/styled-view)
 
-> Any example snippet can be downloaded as a full React Native project on your computer! After unzipping the file, run `npm install` and `expo start` to run the project locally. This is totally optional.
+> Any example snippet can be downloaded as a full React Native project on your computer! We'll include a "Download example" link below each snippet from here on out. After unzipping the file, run `npm install` and `expo start` to run the project locally. This is totally optional.
 
 Inline styles are useful for prototyping, since they're co-located with our rendering code. We also _need_ to use inline styles when defining dynamic styles, e.g. styles based on props, since we don't know the values of our props until the render function is called.
 
