@@ -6,11 +6,11 @@ coverImageBackgroundPosition: "50% 70%;"
 
 > Instead of writing in different languages and frameworks to build for both iOS and Android, React Native allows you to build your application in a single language (JavaScript) and framework (React)
 
-Welcome to 30 days of React Native! Each day in our 30-day journey will cover about a different React Native topic. Many of the articles will build upon the previous day’s materials, and by the end of it we'll have covered all the fundamental concepts you need to build your own mobile app using React Native.
+Welcome to 30 days of React Native! Each day in our 30-day journey will cover a different React Native topic. Many of the articles will build upon the previous day’s materials, and by the end of it we'll have covered all the concepts you need to build your own mobile app using React Native.
 
 We expect readers to be familiar with fundamental React concepts like _components_ already. If you’re not, you can learn many of these with our more web-focused course [30 days of React](https://www.fullstackreact.com/30-days-of-react/). A basic understanding of web concepts like CSS is also expected.
 
-You won't need to have any experience building mobile apps to understand any of the material covered. However, if you're already familiar with a topic and it feels like review, feel free to skip ahead.
+You don't need to have any experience building mobile apps to understand any of the material covered. If you do have some mobile development experience and you're already familiar with a topic, feel free to skip ahead.
 
 _So, what is React Native, anyway?_
 
@@ -20,7 +20,13 @@ React is a JavaScript library for building user interfaces. _React Native_ is a 
 
 One of the core concepts of React Native (and React) is to represent user interfaces in terms of different _components_. Here is an example of a component in React Native:
 
-<iframe src="https://snack.expo.io/embedded/rkIuJ4wVB?preview=true&platform=web" style="height: 29em"/>
+<iframe src="https://snack.expo.io/embedded/@dabbott/intro-component?preview=true&platform=web" style="height: 43em"/>
+
+> Throughout this series, you'll see interactive code snippets like the one above. If you edit the code, the preview will update in realtime. You can even run the preview on an iOS or Android device! These code snippets are hosted using a free service called Expo Snack. This is similar to Codesandbox, Codepen, or JSFiddle for web code.
+
+This component, `IntroComponent`, contains 3 smaller components within it: an `Image` component, a `Button`, and a `Text` label. The label updates when we press the button (go on, try it). It takes fairly little code to do a lot with React Native! We'll explore how each of these components work later this week.
+
+The term _"native"_ in React Native means that the user interface of our app is constructed with the underlying platform's built-in UI elements. On the web, interfaces are constructed with HTML elements — HTML elements are considered _native_ to the web platform since they're provided by the web browser. Similarly, Apple and Google provide a built-in set of UI components for their mobile operating systems. React Native helps us construct interfaces with this, using JavaScript and React.
 
 ## Why React Native?
 

@@ -9,7 +9,7 @@ There are two ways to start building an application in React Native:
 - React Native CLI
 - Expo
 
-In both cases, we can write the same exact React Native code for our application. However, there are differences between the workflows of both approaches. Let’s dive in!
+In both cases, we can write the same exact React Native code for our application. However, there are differences between the workflows of each approach. Let’s dive in!
 
 ## React Native CLI
 
@@ -25,14 +25,14 @@ Although React Native allows anyone to build for both mobile platforms without w
 
 On the other hand, Expo provides a complete **managed workflow** that takes care of the entire build process. This not only makes building and publishing apps easier without having to download and configure several different IDEs, but it also allows developers to build iOS applications without owning a Mac computer.
 
-However, Expo is not suitable for every application. Creating native modules in iOS or Android and bridging them to a new JavaScript API is not possible with Expo. This means that only the specific device APIs already provided by the platform can be used, but nothing more.
+However, Expo is not suitable for every application. Creating native modules in iOS or Android and bridging them to a new JavaScript API is not possible with Expo's managed workflow. This means that only the specific device APIs already provided by the platform can be used, but nothing more.
 
 T> The [documentation](https://docs.expo.io/versions/v34.0.0/introduction/why-not-expo/0) explains this along with other reasons why Expo might not be the best option for every application.
 
 Deciding which option to use can depend on whether you plan on creating a brand new mobile app or integrating React Native into an existing app. If you’re not sure, we recommend the following:
 
 - If you are building a new React Native application from scratch, use Expo’s managed workflow. If at some point in the future you need something that is not provided by the platform, you can always eject.
-- If you are integrating React Native into an existing iOS or Android app, use React Native CLI since Expo cannot be used to bridge custom native code.
+- If you are integrating React Native into an existing iOS or Android app, use React Native CLI since Expo cannot be used to bridge custom native code without ejecting or using the "bare" workflow (more detail below).
 
 Every article in this series, with the exception of "Native Modules", will rely on Expo since we’ll be creating new applications for each section. Let's explore how to get started with the platform!
 
@@ -44,7 +44,7 @@ First, ensure all required dependencies are installed. If you are using `npm`, m
 npm install -g expo-cli
 ```
 
-T> If you are using `yarn`, run `yarn global add expo-cli` instead.
+T> If you are using `yarn`, run `yarn global add expo-cli` instead. We'll be using `npm` throughout this course, but if you prefer `yarn` you're welcome to use it.
 
 Once the CLI is installed, create a new React Native application called "ThirtyDaysRN":
 
