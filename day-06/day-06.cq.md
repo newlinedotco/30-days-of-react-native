@@ -31,13 +31,13 @@ Text components can use all of the same style properties as View components, plu
 
 In the following example, we'll set each of these properties, along with a few we've already used to style our View components:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text?preview=true&platform=web" style="height: 46em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text?preview=true&platform=web" style="height: 47em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 By default, `Text` components automatically grow horizontally to fit the text content drawn within. If the `Text` component can't grow horizontally within its parent anymore, it will then wrap the text content to the next line and grow vertically. However, we can override this behavior by specifying the dimensions of the component ourselves.
 
 In this example, we set the width of the `Text` to 200 explicitly, which affects where it wraps to the next line:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text-with-fixed-width?preview=true&platform=web" style="height: 47em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-text-with-fixed-width?preview=true&platform=web" style="height: 48em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 Note that textAlign affects the alignment of the text content drawn within the `Text` component, but not the component itself. If we want to align the `Text` component in the horizontal center of the screen, we would set the alignItems style property on the parent View.
 

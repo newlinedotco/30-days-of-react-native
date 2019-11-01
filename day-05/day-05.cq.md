@@ -62,7 +62,7 @@ We use justifyContent to determine the distribution of children align the primar
 - **space-between**: Distribute children evenly along the main axis, with remaining space between the children.
 - **space-around**: Distribute children evenly along the main axis, with remaining space between the children, and also at the beginning and end of the main axis.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/justify-content?preview=true&platform=web" style="height: 26em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/justify-content?preview=true&platform=web" style="height: 36em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 ### alignItems
 
@@ -74,7 +74,7 @@ We use alignItems to determine the alignment of children along the cross axis. T
 - **center**: Align children at the center of cross axis.
 - **baseline**: Align children along a common baseline. Individual children can be set to be the reference baseline for their parents.
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/align-items?preview=true&platform=web" style="height: 43em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/align-items?preview=true&platform=web" style="height: 44em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 > Note that _stretch_ will not stretch a child if its `width` is set explitly (or height in the case of a `flexDirection: row` parent).
 
