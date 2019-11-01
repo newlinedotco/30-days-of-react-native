@@ -16,11 +16,11 @@ module.exports = ({ dedent }) => ({
   brandAccentColor1: "#40b882",
   lessonPrefix: "day-",
   summary: dedent`
-    Interested in learning React Native but having trouble getting started?
+    Interested in learning React Native but not sure where to start?
 
     We'll teach you how it all works - _for free_.
 
-    Over the next 30 days, we'll walk through everything you need to know to work with React Native. From the **very beginning** through topics like the **React Native Components**, **Layouts**, and even **running on your device**.
+    Over the next 30 days, we'll walk through everything you need to know to work with React Native. From the **very beginning** through topics like **Navigation**, **Animation**, and even **Native Modules**.
   `,
   summaryCtaButton: "Send Me Free React Native Lessons",
   whatIsThis: dedent`
@@ -59,9 +59,9 @@ module.exports = ({ dedent }) => ({
 `,
   authorSlugs: ["dabbott", "hdjirdeh", "acco"],
   closingCtaH1: "Get started now",
-  closingCtaCopy: `Join us on our 30-day journey in React Native. Join thousands of other professional React Native developers and learn one of the most powerful web application development frameworks available today.`,
-  closingCtaButton: "Get these lessons via email (Once per week, FREE)",
-  publishedOn: "2019-01-07",
+  closingCtaCopy: `Join us on our 30-day journey in React Native. Join thousands of other professional React Native developers and learn one of the most powerful mobile application development frameworks available today.`,
+  closingCtaButton: "Get all 5 chapters via email (Once per week, FREE)",
+  publishedOn: "2019-11-01",
   lessonLanguage: "Day",
   ctaFormAction:
     "https://fd338.infusionsoft.com/app/form/process/532cce85a78032d966902231d154e518",
