@@ -35,10 +35,20 @@ Some days have special instructions, e.g. how to set up a new React Native proje
 
 ## Contributors
 
+<!-- To update this contributors list, run `npx all-contributors-cli` -->
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| <a href='https://twitter.com/djirdehh'><img src='https://pbs.twimg.com/profile_images/973750616487993344/fqDSTrb__400x400.jpg' width='140px;'/><h4 align='center'><a href='https://twitter.com/djirdehh'>Hassan Djirdeh</a></h4> | <a href='https://newline.co'><img src='https://avatars2.githubusercontent.com/u/4318?v=4' width='140px;'/><h4 align='center'><a href='https://newline.co'>Nate Murray</a></h4> |
-| :---: | :---: |
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href='https://twitter.com/dvnabbott'><img src='https://pbs.twimg.com/profile_images/697293943872970754/dkgMlBJX_400x400.jpg' width='140px;'/><h4 align='center'><a href='https://twitter.com/dvnabbott'>Devin Abbott</a></h4></td>
+    <td align="center"><a href='https://twitter.com/hdjirdeh'><img src='https://pbs.twimg.com/profile_images/1047891359007461376/WDC2DvTX_400x400.jpg' width='140px;'/><h4 align='center'><a href='https://twitter.com/hdjirdeh'>Houssein Djirdeh</a></h4></td>
+  </tr>
+</table>
+
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
