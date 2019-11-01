@@ -1,6 +1,6 @@
 # Layout with Flexbox
 
-> If you're familiar with properties like flex-direction and justify-content, then you already know how to create layouts in React Native
+> If you're familiar with CSS properties like flex-direction, then you already know how to create layouts in React Native!
 
 Layouts in React Native are based on CSS — if you're familiar with properties like flex-direction and justify-content, then you already know how to create layouts in React Native (and if you're not, that's fine too!). Today we'll review the most important style properties.
 

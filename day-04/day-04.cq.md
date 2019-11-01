@@ -1,6 +1,6 @@
 # Styles
 
-> React Native styles are based on CSS, but translate into native styles
+> React Native styles are based on CSS, with a few key differences.
 
 We use styles to make our apps look great. Styles let us configure the visual properties of our components, like background color, as well as their layout, i.e. their position and size on the screen.
 

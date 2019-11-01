@@ -1,6 +1,6 @@
 # First component
 
-> Let’s dive into how components work in React Native.
+> Now that we'll all set up, let’s dive into how components work in React Native.
 
 If you’re already familiar with React, then you already know how to write in React Native. This is because they both share a core concept - **using components to construct interfaces.**
 
@@ -62,7 +62,7 @@ export default class App extends React.Component {
 }
 ```
 
-Defining a component using a class requires extending`React.Component`. Using `extends` allows us to declare a class as a subclass of another class. In this example, `App` is a subclass of `React.Component`.
+Defining a component using a class requires extending `React.Component`. Using `extends` allows us to declare a class as a subclass of another class. In this example, `App` is a subclass of `React.Component`.
 
 React Native reads both of these components in the exact same way. However, using class components make it possible to define state or use lifecycle methods.
 
@@ -83,4 +83,4 @@ const styles = StyleSheet.create({
 
 The StyleSheet API is used here to define a `container` style that sets background color and a few flexbox properties. Using `flex: 1` makes the `View` expand to fill the entire screen. The combination of `alignItems: center` and `justifyContent: center` ensure the text component is aligned in the vertical and horizontal center.
 
-Interested in learning more about how styling works in React Native? We’ll be exploring this in more detail in tomorrow’s article!
+Ready to learn more about styling in React Native? We’ll be exploring this in more detail in tomorrow’s article!

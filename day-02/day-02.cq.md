@@ -1,8 +1,8 @@
 # Getting Started
 
-> Expo provides a complete **managed workflow** that takes care of the entire build process.
+> By the end of this article, we’ll have an application up and running on a real device or simulator!
 
-Before we can begin covering different React Native concepts, we’ll need to know how to get up and running with a brand new application first. This includes installing any required dependencies and setting up a working development environment. By the end of this article, we’ll have an application up and running on a real device or simulator!
+Before we can begin covering different React Native concepts, we’ll need to know how to get up and running with a brand new application first. This includes installing any required dependencies and setting up a working development environment.
 
 There are two ways to start building an application in React Native:
 
