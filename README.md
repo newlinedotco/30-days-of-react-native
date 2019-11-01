@@ -19,7 +19,7 @@ This repository contains the entire source and content for the article series of
 <!-- prettier-ignore -->
 |  <a align='center' href='./day-01'><img src='./day-01/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-01'>What is React Native?</a><h4> | <a href='./day-02'><img src='./day-02/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-02'>Getting Started</a><h4> | <a href='./day-03'><img src='./day-03/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-03'>First Component</a><h4> | <a href='./day-04'><img src='./day-04/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-04'>Styles</a><h4> | <a href='./day-05'><img src='./day-05/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-05'>Layout with Flexbox</a><h4>  |
 |:-:|:-:|---|---|---|
-|  <a href='./day-06'><img src='./day-06/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-06'>Text Components</a><h4> | <a href='./day-07'><img src='./day-07/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-07'>Displaying Images</a><h4>| | | |
+|  <a href='./day-06'><img src='./day-06/public/article-image.jpg' width='140px;' /></a><h4 align='center'><a href='./day-06'>Text Components</a><h4> | | | | |
 
 ## 👩‍🏫 How to use this repository
 
