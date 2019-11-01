@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/30-days-of-react-native-hardcover@2x_v2.png"/>
+  <img src="./images/30-days-of-rn-poster.png"/>
 </p>
 <h3 align="center">
   ✨ 30 Days of React Native ✨
