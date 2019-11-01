@@ -20,7 +20,7 @@ React is a JavaScript library for building user interfaces. _React Native_ is a 
 
 One of the core concepts of React Native (and React) is to represent user interfaces in terms of different _components_. Here is an example of a component in React Native:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/intro-component?preview=true&platform=web" style="height: 43em"/>
+<iframe src="https://snack.expo.io/embedded/@dabbott/intro-component?preview=true&platform=web" style="height: 53em;background:#fafafa;border:1px solid rgba(0,0,0,.08);border-radius:4px;"/>
 
 > Throughout this series, you'll see interactive code snippets like the one above. If you edit the code, the preview will update in realtime. You can even run the preview on an iOS or Android device! These code snippets are hosted using a free service called Expo Snack. This is similar to Codesandbox, Codepen, or JSFiddle for web code.
 
