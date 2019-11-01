@@ -28,6 +28,15 @@
       "contributions": [
         "blog"
       ]
+    },
+    {
+      "login": "acco",
+      "name": "Accomazzo Anthony",
+      "avatar_url": "https://s3.amazonaws.com/assets.fullstack.io/n/20190131235848763_acco.png",
+      "profile": "https://twitter.com/accomazzo",
+      "contributions": [
+        "blog"
+      ]
     }
   ]
 }
