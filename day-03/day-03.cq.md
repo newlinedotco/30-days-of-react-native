@@ -10,7 +10,7 @@ If you’ve never used React for the web before, there’s no need to worry! Let
 
 When we create a new application with Expo, a single component is created by default in `App.js`.
 
-<iframe src="https://snack.expo.io/embedded/@houssein/app.js?preview=true&platform=web" style="height: 20em"  />
+<iframe src="https://snack.expo.io/embedded/@houssein/app.js?preview=true&platform=web" style="height: 26em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;"  />
 
 Let’s step through each part of the file. All our imports are declared at the very beginning:
 

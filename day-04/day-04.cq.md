@@ -21,7 +21,7 @@ Most of the built-in React Native components (View, Text, Image, etc) accept a `
 
 In the following example, we set the backgroundColor, width, and height of a View using an _inline_ style object:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-view?preview=true&platform=web" style="height: 20em" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-view?preview=true&platform=web" style="height: 26em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 [Download example](https://expo.io/--/api/v2/snack/download/@dabbott/styled-view)
 
@@ -37,7 +37,7 @@ The `StyleSheet` API gives us a consistent way to define our styles outside of o
 
 Here's the same example as above using StyleSheets:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/stylesheet-view?preview=true&platform=web" style="height: 20em" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/stylesheet-view?preview=true&platform=web" style="height: 26em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 [Download example](https://expo.io/--/api/v2/snack/download/@dabbott/stylesheet-view)
 
@@ -55,7 +55,7 @@ On the web, we would probably pass two classnames to our "fancy" text component:
 
 Here's our example with two `Text` components:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/multiple-styles?preview=true&platform=web" style="height: 30em" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/multiple-styles?preview=true&platform=web" style="height: 38em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
 
 [Download example](https://expo.io/--/api/v2/snack/download/@dabbott/multiple-styles)
 
