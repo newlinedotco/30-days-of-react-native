@@ -12,7 +12,7 @@ We use the **source** prop of the Image component to choose what image to displa
 
 We can display images from the file system much like if we were using a JavaScript bundler for the web (e.g. webpack). We first import the image file by its path, and then pass the imported value as the **source**. Check it out in this example:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/bundled-image?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/bundled-image?preview=true&platform=web" style="height: 28em" />
 
 In production, the React Native packager will include this image in our app bundle so that it loads directly from the device, even if the device isn't connected to the internet.
 
@@ -26,13 +26,13 @@ While we sometimes bundle a handful of images into our app, the majority of the 
 
 Here's an example:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/image-on-the-web?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/image-on-the-web?preview=true&platform=web" style="height: 32em" />
 
 In this case, the image data will be downloaded from the URI when the Image component is rendered for the first time.
 
 Here, the image's intrinsic dimensions are unknown at compile-time, so we must control the Image component's size through styles. In the previous example we set a **width** and **height**, but we could also rely on other flexbox properties, like flex. Here's the same example, but now we stretch the image to fill the entire screen:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/image-on-the-web-fullscreen?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/image-on-the-web-fullscreen?preview=true&platform=web" style="height: 31em" />
 
 If we know the image's intrinsic dimensions ahead-of-time (e.g. maybe it was processed by our backend API already) we can include a width and height value in the object we pass to source to specify the image's intrinsic dimensions.
 
@@ -42,7 +42,7 @@ The Image component can't render any children, so if we want to render content o
 
 Here's the previous example, now using an `ImageBackground` and with a Text child:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/image-with-content-on-top?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/image-with-content-on-top?preview=true&platform=web" style="height: 41em" />
 
 In the examples we've seen so far, the image has been scaled up or down automatically to match the layout of the Image and `ImageBackground` components that render them. Sometimes, however, we want a little more control over the scaling to make sure our images look great.
 
@@ -60,7 +60,7 @@ The three common values for resizeMode are:
 
 In the following example, we can see each of these options in action with a 200x600 image:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/image-resizemode?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/image-resizemode?preview=true&platform=web" style="height: 40em" />
 
 ### Up next
 

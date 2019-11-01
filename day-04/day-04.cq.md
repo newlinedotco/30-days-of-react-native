@@ -21,7 +21,11 @@ Most of the built-in React Native components (View, Text, Image, etc) accept a `
 
 In the following example, we set the backgroundColor, width, and height of a View using an _inline_ style object:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/styled-view?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/styled-view?preview=true&platform=web" style="height: 20em" />
+
+[Download example](https://expo.io/--/api/v2/snack/download/@dabbott/styled-view)
+
+> Any example snippet can be downloaded as a full React Native project on your computer! After unzipping the file, run `npm install` and `expo start` to run the project locally. This is totally optional.
 
 Inline styles are useful for prototyping, since they're co-located with our rendering code. We also _need_ to use inline styles when defining dynamic styles, e.g. styles based on props, since we don't know the values of our props until the render function is called.
 
@@ -33,7 +37,9 @@ The `StyleSheet` API gives us a consistent way to define our styles outside of o
 
 Here's the same example as above using StyleSheets:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/stylesheet-view?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/stylesheet-view?preview=true&platform=web" style="height: 20em" />
+
+[Download example](https://expo.io/--/api/v2/snack/download/@dabbott/stylesheet-view)
 
 We call `StyleSheet.create` with a top-level object containing nested style objects. `StyleSheet` will then optimize our styles and return them to us. The keys of the top-level object are arbitrary, but will determine the names of our optimized styles. We can then refer to them by name in our render method, e.g. styles.myStyle.
 
@@ -49,7 +55,9 @@ On the web, we would probably pass two classnames to our "fancy" text component:
 
 Here's our example with two `Text` components:
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/multiple-styles?preview=true&platform=web" />
+<iframe src="https://snack.expo.io/embedded/@dabbott/multiple-styles?preview=true&platform=web" style="height: 30em" />
+
+[Download example](https://expo.io/--/api/v2/snack/download/@dabbott/multiple-styles)
 
 Here we can see that the fancy text uses the size of the "standard" text, but adds two additional style properties. Note that the color of the "fancy" style overrides the color of the "standard" style, since we pass it last in the array. Also note that we can mix-and-match inline style objects and StyleSheet styles in this array.
 
