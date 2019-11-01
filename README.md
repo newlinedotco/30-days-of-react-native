@@ -23,7 +23,9 @@ This repository contains the entire source and content for the article series of
 
 ## 👩‍🏫 How to use this repository
 
-Most days contain interactive code samples embedded in [Expo Snack](https://snack.expo.io/). Expo Snack is a free service for previewing React Native apps right in your browser, similar to Codesandbox or Codepen, but designed specifically for React Native. However if you'd like, you can run any code sample on your computer by first downloading it (we've included a download link below each code sample), unzipping it, navigating to that directory in the terminal, and then running:
+Most days contain interactive code samples embedded in [Expo Snack](https://snack.expo.io/). Expo Snack is a free service for previewing React Native apps right in your browser, similar to Codesandbox or Codepen, but designed specifically for React Native.
+
+However if you'd like, you can run any code sample on your computer by first downloading it (we've included a download link below each code sample), unzipping it, navigating to that directory in the terminal, and then running:
 
 ```bash
 npm install
@@ -50,6 +52,7 @@ Some days have special instructions, e.g. how to set up a new React Native proje
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 # Fullstack React Native Book
