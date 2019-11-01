@@ -4,7 +4,7 @@ coverImageBackgroundPosition: "50% 70%;"
 
 # What is React Native?
 
-> Instead of writing in different languages to build for both platforms, React Native allows you to build parts of your application (or all of it) in a single language (JavaScript) and framework (React)
+> Instead of writing in different languages and frameworks to build for both iOS and Android, React Native allows you to build your application in a single language (JavaScript) and framework (React)
 
 Welcome to 30 days of React Native! Each day in our 30-day journey will cover about a different React Native topic. Many of the articles will build upon the previous day’s materials, and by the end of it we'll have covered all the fundamental concepts you need to build your own mobile app using React Native.
 
