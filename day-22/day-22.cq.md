@@ -1,72 +1,73 @@
-# Persisting data
+# Network requests
 
-> Async Storage is a lightweight key-value database built specifically for React Native.
+> We typically use `fetch` to make network requests for JSON data.
 
-Many apps persist data on the device's filesystem for later use. Persisting data locally helps provide a great offline experience and handle cases where the user quits the app but wants to resume their progress later.
+Most apps will access the internet in one way or another. Today we'll be looking at one of the most common forms of this: calling an API and handling a JSON reponse object using `fetch`.
 
-Apps persist data of all shapes and sizes - user input, API response JSON, images and videos, and more. Because of the variety of kinds of data we might want to persist, there are also a variety of ways we can do it:
+React Native supports most of the same networking APIs as web browsers, like `XMLHttpRequest` and `fetch`. This means that libraries you might already be familiar with, like `superagent` or `axios`, should work out-of-the-box. Additionally, there are third-party libraries for supporting more advanced use cases, like Apollo for GraphQL.
 
-- Binary data, like images and videos, are typically stored as files
-- Very large data sets might be stored in a database, like SQLite or [realm](https://realm.io/docs/javascript/latest/)
-- Smaller bits of data, like user input, authentication tokens, and API responses, are typically stored using [async-storage](https://github.com/react-native-community/async-storage)
+## But first... `async` and `await`
 
-We'll be looking at [`async-storage`](https://github.com/react-native-community/async-storage) today. This is React Native's equivalent of `localStorage` on the web.
+If you already know how to use the JavaScript keywords `async` and `await`, skip ahead to the next section. Otherwise, here's a quick primer.
 
-## Async Storage
+The keywords `async` and `await` are a useful JavaScript language feature for handling control flow in asynchronous programs. These leverage the `Promise` class under the hood, and are an alternative to many patterns that previously used callbacks.
 
-Async Storage is a lightweight key-value database built specifically for React Native. Keys and values are stored in the database as strings. While technically values can be any string, most values we store will be stringified JSON, and there are even a few built-in utility methods that assume values are JSON strings. There are no APIs for indexing or searching data.
+To use these:
 
-The implementation of the database is allowed to be different on different platforms, e.g. it could be a single file, multiple files, or a SQLite database. For that reason, it's best not to assume any performance characteristics if you're planning to store and retreive a lot of data on multiple platforms -- you'll need to try it for your supported platforms and see what happens.
+- We write `async` before a function definition. This _forces the function to return a `Promise`_. No matter what we `return` from an `async function`, the value will be wrapped in a promise if it isn't already.
+- We write `await` before a `Promise` to pause the execution of the current function until the `Promise` is resolved or rejected. This pause is _non-blocking_, so other code can still run if triggered by a browser/`node` event. We can _only use `await` within an `async` function_.
 
-To install `async-storage`, run:
-
-```bash
-npm install --save @react-native-community/async-storage
-```
-
-> Before React Native 60, `async-storage` was bundled with React Native out-of-the-box, and imported with `import { AsyncStorage } from 'react-native'. This is still how we'll import it in Expo snacks.
-
-### Getting and setting items
-
-As the name implies, all operations using `async-storage` are asynchronous. All of the APIs we call will return a `Promise`, so we'll usually call them with `await` (if you need a primer on `await`, check out yesterday's [article on network requests](./day-21-network-requests)). Most APIs can also fail (e.g. the device might be out of storage), so we should also handle errors.
-
-Here's a slightly modified excerpt from the docs demonstrating how to store and retrieve data:
+Here's an example:
 
 ```js
-storeData = async () => {
-  try {
-    await AsyncStorage.setItem("my_storage_key", "stored value");
-  } catch (e) {
-    // error saving
-  }
-};
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-readData = async () => {
-  try {
-    const value = await AsyncStorage.getItem("my_storage_key");
+// This function returns Promise.resolve(42), since it's marked as `async`
+async function getNumber() {
+  return 42;
+}
 
-    if (value !== null) {
-      // handle a previously stored value
-    }
-  } catch (e) {
-    // error reading value
-  }
-};
+async function main() {
+  console.log("hello"); // => "hello"
+  await sleep(1000); // wait 1000ms
+  console.log("world"); // => "world"
+  const number = await getNumber(); // unwrap the 42 from its promise
+  console.log(number); // => "42"
+}
+
+main();
 ```
 
-### Example
+In this example, we created a `sleep` function that waits for `ms` milliseconds using `setTimeout`. We also created a `getNumber` function that _doesn't need to be asynchronous_, but still wraps its result in a `Promise` since it's marked as `async`. Lastly, we call these from a `main` function using `await`. Sometimes we may ignore the result of an `await`-ed function, like `sleep`. Other times we may use the value, as in the case of `getNumber`.
 
-Let's build on the example from yesterday's [article on network requests](./day-21-network-requests) by adding offline support for reading the lists of posts we fetch.
+If an error is thrown in an `async` function, the function will then return `Promise.reject(error)`. If an `await`-ed `Promise` is rejected, the error value is thrown -- so most `await` calls should happen in a `try/catch` block.
 
-The main difference will be:
+We commonly use `async` and `await` for network calls, as we'll see now!
 
-- After we fetch data, we'll store the JSON response using `AsyncStorage.setItem` so that it's there the next time the app launches
-- When the component renders for the first time, as part of our `useEffect` call, we'll first try to read a previously stored item using `AsyncStorage.getItem`. If there's nothing stored, or if retrieving it fails, we fetch data as normal
+## `fetch`
 
-<iframe src="https://snack.expo.io/embedded/@dabbott/persisting-data?preview=true&platform=web" style="height: 37em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+We typically use `fetch` to make network requests for JSON data.
 
-[Download example](https://expo.io/--/api/v2/snack/download/@dabbott/persisting-data)
+Here's an example where we fetch a list of posts from a placeholder data API:
+
+```
+async function fetchPosts() {
+  const result = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const posts = await result.json();
+  return posts;
+}
+```
+
+The call to `fetch` returns a `Promise`, so we use `await` to pause execution of the function until the `Promise` resolves. After that, we convert the response to a JavaScript object using `result.json()`, which is also asynchronous and returns a `Promise`. Finally, we return the result from our function.
+
+Here's what a component that uses `fetchPosts` might look like:
+
+<iframe src="https://snack.expo.io/embedded/@dabbott/network-requests?preview=true&platform=web" style="height: 37em;border:1px solid rgba(0,0,0,.08);border-radius:4px;background:center no-repeat url('https://i.imgur.com/5apDm5w.gif'), #fafafa;" />
+
+[Download example](https://expo.io/--/api/v2/snack/download/@dabbott/network-requests)
 
 ### Up next
 
-We've covered a lot of material over the past few days: navigation, animation, gestures, network requests, persisting data, and more. Now it's time to practice putting it all together!
+Fetching data from the internet is great, but one of the big advantages of mobile apps is that we can make the data available offline. To do that, we'll need to persist the data we fetch. Check out tomorrow's article to see how!
