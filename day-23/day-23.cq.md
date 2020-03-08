@@ -24,7 +24,7 @@ To install `async-storage`, run:
 npm install --save @react-native-community/async-storage
 ```
 
-> Before React Native 60, `async-storage` was bundled with React Native out-of-the-box, and imported with `import { AsyncStorage } from 'react-native'. This is still how we'll import it in Expo snacks.
+> Before React Native 60, `async-storage` was bundled with React Native out-of-the-box, and imported with `import { AsyncStorage } from 'react-native'`. This is still how we'll import it in Expo Snack examples.
 
 ### Getting and setting items
 

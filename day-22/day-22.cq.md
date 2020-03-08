@@ -40,7 +40,7 @@ async function main() {
 main();
 ```
 
-In this example, we created a `sleep` function that waits for `ms` milliseconds using `setTimeout`. We also created a `getNumber` function that _doesn't need to be asynchronous_, but still wraps its result in a `Promise` since it's marked as `async`. Lastly, we call these from a `main` function using `await`. Sometimes we may ignore the result of an `await`-ed function, like `sleep`. Other times we may use the value, as in the case of `getNumber`.
+In this example, we created a `sleep` function that waits for `ms` milliseconds using `setTimeout`. We also created a `getNumber` function that doesn't actually do anything asynchronous, but still wraps its result in a `Promise` since it's marked as `async`. Lastly, we call these from a `main` function using `await`. Sometimes we may ignore the result of an `await`-ed function, like `sleep`. Other times we may use the value, as in the case of `getNumber`.
 
 If an error is thrown in an `async` function, the function will then return `Promise.reject(error)`. If an `await`-ed `Promise` is rejected, the error value is thrown -- so most `await` calls should happen in a `try/catch` block.
 
@@ -52,9 +52,9 @@ We typically use `fetch` to make network requests for JSON data.
 
 Here's an example where we fetch a list of posts from a placeholder data API:
 
-```
+```js
 async function fetchPosts() {
-  const result = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const result = await fetch("https://jsonplaceholder.typicode.com/posts");
   const posts = await result.json();
   return posts;
 }
